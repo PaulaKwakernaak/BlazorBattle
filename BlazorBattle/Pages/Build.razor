@@ -1,0 +1,32 @@
+﻿@page "/build"
+@inject IBananaService BananaService;
+
+
+<h3>Build</h3>
+@*<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="()=> EatBananas(10)">
+        Eet Bananen
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>*@
+
+<button class="btn btn-primary" @onclick="() => EatBananas(10)">Eet Bananen</button>
+<p> </p>
+
+@code {
+   // int currentAmount = 100;
+
+    private void EatBananas(int amount)
+    {
+        //currentAmount -=10 ;
+        BananaService.EatBananas(amount);
+       // Console.WriteLine($"{amount} bananen gegeten");
+        
+    }
+
+}
