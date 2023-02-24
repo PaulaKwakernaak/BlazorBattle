@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@using Blazored.Toast.Configuration
+
 
 <div class="page">
     <div class="sidebar">
@@ -15,3 +17,8 @@
         </article>
     </div>
 </div>
+
+
+<BlazoredToasts Position="ToastPosition.TopCenter"
+                Timeout="10"
+                ShowProgressBar="true" />

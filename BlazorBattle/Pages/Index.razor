@@ -1,9 +1,38 @@
-﻿@page "/"
+﻿@*@inject NavigationManager uriHelper;
+@inject IJSRuntime JS;*@
+@*@attribute [ComponentRenderMode(WebComponentRenderMode.Server)]*@
+
+@using System.Threading;
+@*<!--trying to use Js-->
+@using System.Runtime.InteropServices.JavaScript*@
+
+
+
+@page "/"
 
 <PageTitle>Blazor Battles</PageTitle>
 <h1>Welkom op Blazor Battles</h1>
 
 
 
+@*this is only trying to get the virtual keyboard*@
 
+<!-- An example of a textarea element: The keyboard type is "all", the placement is "top", and the availability of the special characters is "true". -->
+<textarea class="js-virtual-keyboard" data-kioskboard-type="all" data-kioskboard-placement="top" data-kioskboard-specialcharacters="true" placeholder="Your Address">
+   
+
+</textarea>
+
+<!-- An example of an input element: The keyboard type is "keyboard", the placement is "bottom", and the availability of the special characters is "false". -->
+<input @ref = "NameInput" class="js-virtual-keyboard" data-kioskboard-type="keyboard" data-kioskboard-placement="bottom" data-kioskboard-specialcharacters="false" placeholder="Your Name" />
+
+<!-- An example of an input element: The keyboard type is "numpad", and the placement is "bottom". (Special characters are not allowed for "numpad".) -->
+@*<input  @ref = "NumberInput" class="js-virtual-keyboard" data-kioskboard-type="numpad" data-kioskboard-placement="bottom" placeholder="Your Number" />*@
+
+
+@code{
+    private ElementReference NameInput;
+    private ElementReference NumberInput;
+
+}
 
