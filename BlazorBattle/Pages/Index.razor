@@ -1,38 +1,53 @@
-﻿@*@inject NavigationManager uriHelper;
-@inject IJSRuntime JS;*@
-@*@attribute [ComponentRenderMode(WebComponentRenderMode.Server)]*@
+﻿@*@inject NavigationManager uriHelper;*@
+@inject IJSRuntime JS;
+@*@attribute [ComponentRenderMode(WebComponentRenderMode.Server);*@
+@inherits BlazorBattle.Pages.IndexBase
+
 
 @using System.Threading;
-@*<!--trying to use Js-->
-@using System.Runtime.InteropServices.JavaScript*@
+<!--trying to use Js-->
+@*@using System.Runtime.InteropServices.JavaScript*@
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+      
+
+        string name = await JS.InvokeAsync<string>("prompt", "What is your name?");
+        await JS.InvokeVoidAsync("alert", $"Hello {name}!");
+    }
+
+}
 
 
 
 @page "/"
 
+
 <PageTitle>Blazor Battles</PageTitle>
-<h1>Welkom op Blazor Battles</h1>
+<h1 id="demo"> Welkom op Blazor Battles</h1>
+<div style="height:100px;width:20px"></div>
+<!-- An example of an input element: The keyboard type is "keyboard", the placement is "bottom", and the availability of the special characters is "false". -->
+@*<input @ref="NameInput" class="js-virtual-keyboard" data-kioskboard-type="keyboard" data-kioskboard-placement="bottom" data-kioskboard-specialcharacters="false" placeholder="Your Name" />*@
+    
 
 
 
-@*this is only trying to get the virtual keyboard*@
+
 
 <!-- An example of a textarea element: The keyboard type is "all", the placement is "top", and the availability of the special characters is "true". -->
-<textarea class="js-virtual-keyboard" data-kioskboard-type="all" data-kioskboard-placement="top" data-kioskboard-specialcharacters="true" placeholder="Your Address">
-   
-
+<textarea tabindex="1" id="text-id" class="js-virtual-keyboard" data-kioskboard-type="all" data-kioskboard-placement="bottom" data-kioskboard-specialcharacters="true" placeholder="my adress to test"  onchange="textIsEntered()"
+          onclick="keyIsPressedOnKeyboard()" oninput="textIsEntered()" autofocus> 
 </textarea>
-
-<!-- An example of an input element: The keyboard type is "keyboard", the placement is "bottom", and the availability of the special characters is "false". -->
-<input @ref = "NameInput" class="js-virtual-keyboard" data-kioskboard-type="keyboard" data-kioskboard-placement="bottom" data-kioskboard-specialcharacters="false" placeholder="Your Name" />
 
 <!-- An example of an input element: The keyboard type is "numpad", and the placement is "bottom". (Special characters are not allowed for "numpad".) -->
 @*<input  @ref = "NumberInput" class="js-virtual-keyboard" data-kioskboard-type="numpad" data-kioskboard-placement="bottom" placeholder="Your Number" />*@
-
+@*<input onclick="keyIsPressedOnKeyboard()" onchange="textIsEntered()"
+           />*@
 
 @code{
     private ElementReference NameInput;
     private ElementReference NumberInput;
-
 }
+
 
