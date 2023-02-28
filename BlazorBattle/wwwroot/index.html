@@ -32,7 +32,6 @@
     
 
     <script>
-        console.log('test one');
         setTimeout(() => {
             KioskBoard.init({
                 theme: 'dark',
@@ -40,9 +39,26 @@
 
             });
             KioskBoard.run('.js-virtual-keyboard');
+
+            let collection = document.getElementsByClassName('js-virtual-keyboard');
+            for (let item of collection) {
+                item.onfocus = () => {
+                    linkKioskeyMethods();
+                }
+            }
         }, 5000);
 
-
+        function linkKioskeyMethods() {
+            let kioskBoard = document.getElementsByClassName('kioskboard-wrapper');
+            for (let row of kioskBoard[0].children) {
+                for (let key of row.children) {
+                    key.onclick = () => {
+                        console.log(key.getAttribute('data-value'));
+                        // Insert Method here!
+                    }
+                }
+            }
+        }
     </script>
 </body>
 
