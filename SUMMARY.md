@@ -8,3 +8,4 @@
   * [wwwroot](blazorbattle-1/wwwroot/README.md)
     * [css](blazorbattle-1/wwwroot/css/README.md)
       * [Open Iconic v1.1.1](BlazorBattle/wwwroot/css/open-iconic/README.md)
+* [Watch the Knights fight with the bananas](watch-the-knights-fight-with-the-bananas.md)
