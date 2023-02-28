@@ -3,6 +3,7 @@ using BlazorBattle.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Blazored.Toast;
+using Microsoft.AspNetCore.Components.Forms;
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);

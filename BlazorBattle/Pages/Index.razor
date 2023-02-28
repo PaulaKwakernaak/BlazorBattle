@@ -9,11 +9,10 @@
 @*@using System.Runtime.InteropServices.JavaScript*@
 
 @code {
+    //zonder dit komt er geen keyboard 
     protected override async Task OnInitializedAsync()
     {
-      
-
-        string name = await JS.InvokeAsync<string>("prompt", "What is your name?");
+       string name = await JS.InvokeAsync<string>("prompt", "What is your name?");
         await JS.InvokeVoidAsync("alert", $"Hello {name}!");
     }
 
