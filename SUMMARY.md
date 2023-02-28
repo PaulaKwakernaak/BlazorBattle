@@ -3,7 +3,7 @@
 * [README](README.md)
 * [BlazorBattle](blazorbattle/README.md)
   * [Documentation](blazorbattle/documentation/README.md)
-    * [Sectie 4](blazorbattle/documentation/cursus/README.md)
+    * [Sectie 4](BlazorBattle/Documentation/Cursus.md)
       * [Watch the bananas🍌🍌](blazorbattle/documentation/cursus/watch-the-bananas.md)
 * [BlazorBattle](blazorbattle-1/README.md)
   * [wwwroot](blazorbattle-1/wwwroot/README.md)
