@@ -1,5 +1,8 @@
 ---
 description: What to expect this section
+cover: >-
+  https://images.unsplash.com/photo-1460194436988-671f763436b7?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw2fHxiYXR0bGV8ZW58MHx8fHwxNjc3NTgyODU2&ixlib=rb-4.0.3&q=80
+coverY: 0
 ---
 
 # Sectie 4
