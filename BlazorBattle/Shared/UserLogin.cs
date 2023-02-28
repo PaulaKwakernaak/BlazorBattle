@@ -5,10 +5,10 @@ namespace BlazorBattle.Shared
 {
     public class UserLogin
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter a username")]
         public string UserName { get; set; }
 
-        [Required]       
+        [Required(ErrorMessage = "Pleas enter a login name") ]       
         public string Password { get; set; }
     }
 }

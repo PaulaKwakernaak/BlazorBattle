@@ -51,7 +51,7 @@
         function linkKioskeyMethods() {
             let kioskBoard = document.getElementsByClassName('kioskboard-wrapper');
             for (let row of kioskBoard[0].children) {
-                for (let key of row.children) {
+                for (let key of row.children) { 
                     key.onclick = () => {
                         console.log(key.getAttribute('data-value'));
                         // Insert Method here!

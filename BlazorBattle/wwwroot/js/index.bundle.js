@@ -29,20 +29,6 @@
     } e.n = o => { var a = o && o.__esModule ? () => o.default : () => o; return e.d(a, { a }), a }, e.d = (o, a) => { for (var r in a) e.o(a, r) && !e.o(o, r) && Object.defineProperty(o, r, { enumerable: !0, get: a[r] }) }, e.g = function () { if ("object" == typeof globalThis) return globalThis; try { return this || new Function("return this")() } catch (o) { if ("object" == typeof window) return window } }(), e.o = (o, a) => Object.prototype.hasOwnProperty.call(o, a), (() => { "use strict"; var o = e(818), a = e.n(o); a().init({ keysArrayOfObjects: null, keysJsonUrl: null, keysSpecialCharsArrayOfStrings: null, keysNumpadArrayOfNumbers: null, language: "en", theme: "light", autoScroll: !0, capsLockActive: !0, allowRealKeyboard: !1, allowMobileKeyboard: !1, cssAnimations: !0, cssAnimationsDuration: 360, cssAnimationsStyle: "slide", keysAllowSpacebar: !0, keysSpacebarText: "Space", keysFontFamily: "sans-serif", keysFontSize: "22px", keysFontWeight: "normal", keysIconSize: "25px", keysEnterText: "Enter", keysEnterCallback: void 0, keysEnterCanClose: !0 }), a().run(".js-virtual-keyboard") })()
 })();
 
-//function initKeyboard() {
-//    KioskBoard.run('.js-virtual-keyboard', {
-//        keysArrayOfObjects: [{ "0": "Q", "1": "W", "2": "E", "3": "R", "4": "T", "5": "Y", "6": "U", "7": "I", "8": "O", "9": "P" }, { "0": "A", "1": "S", "2": "D", "3": "F", "4": "G", "5": "H", "6": "J", "7": "K", "8": "L" }, { "0": "Z", "1": "X", "2": "C", "3": "V", "4": "B", "5": "N", "6": "M" }]
-//        , theme: 'dark'
-
-//        // Allow or prevent real/physical keyboard usage. Prevented when "false"
-//        // In addition, the "allowMobileKeyboard" option must be "true" as well, if the real/physical keyboard has wanted to be used.
-//        , allowRealKeyboard: false,
-
-//        // for more options see https://furcan.github.io/KioskBoard/
-//    });
-//};
-
-//initKeyboard();
 
 //function when text-area is clicked on to start typing on the virtual keyboard
 function keyIsPressedOnKeyboard() {
