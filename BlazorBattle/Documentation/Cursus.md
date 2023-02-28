@@ -1,11 +1,19 @@
-﻿## Sectie 4
+---
+description: What to expect this section
+---
 
-### les 24 t/m 38
+# Sectie 4
 
- - Register and authenticate an user </br>
- - EditForms, built-in forms components & validation</br>
- - New models</br>
- - AuthenticationStateProvider, AuthorizeView & AuthorizeRouteView</br>
- - Local Storage
+## les 24 t/m 38
 
- 25 user Login Form with validation
+* Register and authenticate an user\
+
+* EditForms, built-in forms components & validation\
+
+* New models\
+
+* AuthenticationStateProvider, AuthorizeView & AuthorizeRouteView\
+
+* Local Storage
+
+25 user Login Form with validation
